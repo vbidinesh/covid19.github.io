@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link href="https://www.highcharts.com/highslide/highslide.css" rel="stylesheet" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://code.highcharts.com/6/highcharts.js"></script>
+        <script type="text/javascript" src="https://code.highcharts.com/6/highcharts-more.js"></script>
+        <script type="text/javascript" src="https://code.highcharts.com/6/modules/heatmap.js"></script>
+        <script type="text/javascript" src="https://code.highcharts.com/6/modules/exporting.js"></script>
+    </head>
+    <body style="margin:0;padding:0">
+                <div id="container" style="">Loading....</div>
+
+
+    <script>
+        $(function(){
+
+
+
+
+
+            Highcharts.setOptions({"global": {}, "lang": {}});
+            var option = {"chart": {"renderTo": "container", "type": "bar"}, "colors": {}, "credits": {"enabled": false}, "drilldown": {}, "exporting": {}, "labels": {}, "legend": {"enabled": true}, "loading": {}, "navigation": {}, "pane": {}, "plotOptions": {"series": {"dataLabels": {"enabled": true}}}, "series": {}, "subtitle": {}, "title": {"text": "Hospitals by State"}, "tooltip": {"headerFormat": "<b>{series.name}</b><br/>", "pointFormat": "{point.x}"}, "xAxis": {"reversed": false, "categories": ["Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu & Kashmir", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal", "Andaman & Nicobar Islands", "Chandigarh", "Dadra & Nagar Haveli", "Daman & Diu", "Delhi", "Lakshadweep", "Puducherry", "INDIA"], "maxPadding": 0.05, "showLastLabel": true}, "yAxis": {"title": {"text": "#Cases"}, "stackLabels": {"enabled": true, "style": {"fontWeight": "bold", "color": "gray"}}, "lineWidth": 2}};
+
+
+ 
+
+            var chart = new Highcharts.Chart(option);
+
+            var data = [{"data": [65, 10, 50, 103, 45, 25, 122, 59, 96, 76, 36, 374, 299, 117, 438, 7, 14, 34, 15, 149, 172, 150, 9, 525, 61, 56, 193, 50, 294, 3, 4, 1, 0, 109, 0, 11, 3772], "type": "bar", "marker": {"enabled": false}, "name": "Urban Hospitals"}, {"data": [193, 208, 1176, 930, 169, 17, 364, 609, 705, 56, 519, 2471, 981, 334, 273, 23, 143, 56, 21, 1655, 510, 602, 24, 692, 802, 99, 4442, 410, 1272, 27, 0, 10, 5, 0, 9, 3, 19810], "type": "bar", "marker": {"enabled": false}, "name": "Rural Hospitals"}, {"data": [16658, 268, 6198, 5936, 4342, 1608, 20565, 4550, 6734, 4417, 4942, 49093, 21139, 18819, 39048, 697, 2487, 1393, 1250, 12180, 12128, 10760, 1300, 37353, 13315, 3277, 37156, 5228, 58882, 500, 778, 316, 0, 24383, 0, 3473, 431173], "type": "bar", "marker": {"enabled": false}, "name": "Urban Beds"}, {"data": [6480, 2136, 10944, 6083, 5070, 1405, 11715, 6690, 5665, 7234, 5842, 21072, 16865, 10020, 12398, 730, 1970, 604, 630, 6339, 5805, 21088, 260, 40179, 7668, 1140, 39104, 3284, 19684, 575, 0, 273, 240, 0, 300, 96, 279588], "type": "bar", "marker": {"enabled": false}, "name": "Rural Beds"}];
+            var dataLen = data.length;
+            for (var ix = 0; ix < dataLen; ix++) {
+                chart.addSeries(data[ix]);
+            }
+ 
+
+
+
+
+
+
+
+        
+    });
+        </script>
+
+    </body>
+</html>

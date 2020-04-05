@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link href="https://www.highcharts.com/highslide/highslide.css" rel="stylesheet" />
+        <link href="./dashboard.css" rel="stylesheet" />
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://code.highcharts.com/6/highcharts.js"></script>
+        <script type="text/javascript" src="https://code.highcharts.com/6/highcharts-more.js"></script>
+        <script type="text/javascript" src="https://code.highcharts.com/6/modules/heatmap.js"></script>
+        <script type="text/javascript" src="https://code.highcharts.com/6/modules/exporting.js"></script>
+    </head>
+    <body style="margin:0;padding:0">
+                <div id="container" style="">Loading....</div>
+
+
+    <script>
+        $(function(){
+
+
+
+
+
+            Highcharts.setOptions({"global": {}, "lang": {}});
+            var option = {"chart": {"renderTo": "container", "type": "bar"}, "colors": {}, "credits": {"enabled": false}, "drilldown": {}, "exporting": {}, "labels": {}, "legend": {"enabled": true}, "loading": {}, "navigation": {}, "pane": {}, "plotOptions": {"series": {"dataLabels": {"enabled": true, "style": {"fontWeight": "bold", "color": "gray"}}, "stacking": "normal"}}, "series": {}, "subtitle": {}, "title": {"text": "Hospitals by State"}, "tooltip": {"shared": true, "enabled": true}, "xAxis": {"reversed": true, "categories": ["Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu & Kashmir", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal", "Andaman & Nicobar Islands", "Chandigarh", "Dadra & Nagar Haveli", "Daman & Diu", "Delhi", "Lakshadweep", "Puducherry", "INDIA"], "maxPadding": 0.05, "showLastLabel": true}, "yAxis": {"title": {"text": "#Cases"}, "stackLabels": {"enabled": true, "style": {"color": "black"}}, "lineWidth": 2}};
+
+
+ 
+
+            var chart = new Highcharts.Chart(option);
+
+            var data = [{"data": [65, 10, 50, 103, 45, 25, 122, 59, 96, 76, 36, 374, 299, 117, 438, 7, 14, 34, 15, 149, 172, 150, 9, 525, 61, 56, 193, 50, 294, 3, 4, 1, 0, 109, 0, 11], "type": "bar", "marker": {"enabled": true}, "color": "#1A5276", "name": "Urban Hospitals"}, {"data": [193, 208, 1176, 930, 169, 17, 364, 609, 705, 56, 519, 2471, 981, 334, 273, 23, 143, 56, 21, 1655, 510, 602, 24, 692, 802, 99, 4442, 410, 1272, 27, 0, 10, 5, 0, 9, 3], "type": "bar", "marker": {"enabled": true}, "color": "#6E2C00", "name": "Rural Hospitals"}];
+            var dataLen = data.length;
+            for (var ix = 0; ix < dataLen; ix++) {
+                chart.addSeries(data[ix]);
+            }
+ 
+
+
+
+
+
+
+
+        
+    });
+        </script>
+
+    </body>
+</html>
