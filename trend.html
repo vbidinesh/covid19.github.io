@@ -29,7 +29,7 @@
 
             var chart = new Highcharts.Chart(option);
 
-            var data = [{"data": [72, 26, 6, 20, 14, 30, 61, 73, 69, 82, 64, 85, 54, 135, 129, 102, 145, 253, 369, 491, 513, 496, 554, 420, 460, 5], "type": "column", "marker": {"enabled": true}, "color": "#1A5276", "name": "Active"}, {"data": [10, 0, 4, 1, 0, 0, 8, 0, 0, 2, 15, 3, 7, 26, 9, 5, 47, 13, 19, 22, 38, 54, 45, 54, 86, 0], "type": "column", "marker": {"enabled": true}, "color": "#6E2C00", "name": "Recovered"}, {"data": [2, 0, 0, 1, 0, 1, 0, 0, 3, 1, 2, 2, 4, 3, 5, 3, 16, 6, 7, 16, 14, 13, 19, 15, 27, 4], "type": "column", "marker": {"enabled": true}, "color": "#2C3E50", "name": "Death"}];
+            var data = [{"data": [72, 26, 6, 20, 14, 30, 61, 73, 69, 82, 64, 85, 54, 135, 129, 102, 145, 253, 369, 491, 513, 496, 554, 420, 460, 4], "type": "column", "marker": {"enabled": true}, "color": "#1A5276", "name": "Active"}, {"data": [10, 0, 4, 1, 0, 0, 8, 0, 0, 2, 15, 3, 7, 26, 9, 5, 47, 13, 19, 22, 38, 54, 45, 54, 86, 0], "type": "column", "marker": {"enabled": true}, "color": "#6E2C00", "name": "Recovered"}, {"data": [2, 0, 0, 1, 0, 1, 0, 0, 3, 1, 2, 2, 4, 3, 5, 3, 16, 6, 7, 16, 14, 13, 19, 15, 27, 5], "type": "column", "marker": {"enabled": true}, "color": "#2C3E50", "name": "Death"}];
             var dataLen = data.length;
             for (var ix = 0; ix < dataLen; ix++) {
                 chart.addSeries(data[ix]);
